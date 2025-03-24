@@ -6,10 +6,21 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "eslint": "eslint --report-unused-disable-directives --max-warnings 0",
+    "stylelint": "stylelint \"**/*.css\" --report-needless-disables --max-warnings 0",
+    "prettier": "prettier . --write"
   },
   "devDependencies": {
+    "@eslint/js": "^9.23.0",
+    "eslint": "^9.23.0",
+    "eslint-config-prettier": "^10.1.1",
+    "globals": "^16.0.0",
+    "prettier": "3.5.3",
+    "stylelint": "^16.16.0",
+    "stylelint-config-standard": "^37.0.0",
     "typescript": "~5.7.2",
+    "typescript-eslint": "^8.28.0",
     "vite": "^6.2.0"
   },
   "license": "GPL-3.0",
