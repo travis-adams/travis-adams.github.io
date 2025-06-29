@@ -9,9 +9,17 @@
   </head>
   <body>
     <div id="sky"></div>
-    <svg id="sun" width="100%" height="100vh">
-      <circle cx="50%" cy="50%" r="25%" fill="#ffff44" />
-    </svg>
+    <div id="sun-container">
+      <svg id="sun-svg" width="80cqmin" height="80cqmin" viewBox="0 0 100 100">
+        <mask id="dyson-mask">
+          <rect width="100" height="100" fill="white" />
+          <rect id="dyson-left" x="-50" height="100" fill="black" />
+          <rect id="dyson-right" x="50" height="100" fill="black" />
+        </mask>
+        <circle id="sun" cx="50" cy="50" r="49.9" fill="#ff4" />
+        <circle id="dyson" cx="50" cy="50" r="50" mask="url(#dyson-mask)" />
+      </svg>
+    </div>
     <div id="ground"></div>
   </body>
 </html>

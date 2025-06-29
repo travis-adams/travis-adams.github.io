@@ -17,21 +17,31 @@ p {
   margin: 0;
 }
 
-@keyframes lighten-sky {
+@keyframes lighten-sky-then-darken {
   0% {
     filter: brightness(15%);
   }
 
-  100% {
+  20%,
+  30% {
     filter: brightness(100%);
+  }
+
+  70%,
+  80% {
+    filter: brightness(0);
+  }
+
+  100% {
+    filter: brightness(10%);
   }
 }
 
 #sky {
-  background-color: deepskyblue;
-  height: 200vh;
+  background-color: #66f;
+  height: 1000vh;
   width: 100%;
-  animation: lighten-sky linear;
+  animation: lighten-sky-then-darken linear;
   animation-timeline: --page-scroll;
 }
 
@@ -40,13 +50,19 @@ p {
     top: 50vh;
   }
 
+  20%,
   100% {
     top: 0;
   }
 }
 
-#sun {
+#sun-container {
+  width: 100%;
+  height: 100vh;
   position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   z-index: 2;
   animation: raise-sun linear;
   animation-timeline: --page-scroll;
@@ -58,6 +74,7 @@ p {
     filter: brightness(20%);
   }
 
+  20%,
   100% {
     transform: scaleY(0);
     filter: brightness(100%);
@@ -65,7 +82,7 @@ p {
 }
 
 #ground {
-  background-color: green;
+  background-color: #070;
   width: 100%;
   height: 50vh;
   position: fixed;
@@ -73,5 +90,47 @@ p {
   z-index: 3;
   transform-origin: bottom;
   animation: lower-ground linear;
+  animation-timeline: --page-scroll;
+}
+
+#sun-svg {
+  transform: rotate(-13deg);
+}
+
+@keyframes close-dyson {
+  0%,
+  30% {
+    width: 50%;
+  }
+
+  70%,
+  100% {
+    width: 0%;
+  }
+}
+
+#dyson-left,
+#dyson-right {
+  animation: close-dyson ease-in-out;
+  animation-timeline: --page-scroll;
+}
+
+#dyson-left {
+  transform: scaleX(-1);
+}
+
+@keyframes turn-dyson-blue {
+  0%,
+  80% {
+    fill: #000;
+  }
+
+  100% {
+    fill: #113;
+  }
+}
+
+#dyson {
+  animation: turn-dyson-blue linear;
   animation-timeline: --page-scroll;
 }
