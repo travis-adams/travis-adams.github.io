@@ -93,8 +93,21 @@ p {
   animation-timeline: --page-scroll;
 }
 
+@keyframes blur-dyson {
+  0%,
+  80% {
+    filter: blur(0);
+  }
+
+  100% {
+    filter: blur(5px);
+  }
+}
+
 #sun-svg {
   transform: rotate(-13deg);
+  animation: blur-dyson linear;
+  animation-timeline: --page-scroll;
 }
 
 @keyframes hide-sun {
