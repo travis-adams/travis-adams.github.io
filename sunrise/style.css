@@ -97,26 +97,23 @@ p {
   transform: rotate(-13deg);
 }
 
-@keyframes close-dyson {
+@keyframes hide-sun {
   0%,
   30% {
-    width: 50%;
+    x: 0%;
+    width: 100%;
   }
 
   70%,
   100% {
+    x: 50%;
     width: 0%;
   }
 }
 
-#dyson-left,
-#dyson-right {
-  animation: close-dyson ease-in-out;
+#sun-visibility {
+  animation: hide-sun ease-in-out;
   animation-timeline: --page-scroll;
-}
-
-#dyson-left {
-  transform: scaleX(-1);
 }
 
 @keyframes turn-dyson-blue {

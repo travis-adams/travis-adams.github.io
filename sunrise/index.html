@@ -11,13 +11,20 @@
     <div id="sky"></div>
     <div id="sun-container">
       <svg id="sun-svg" width="80cqmin" height="80cqmin" viewBox="0 0 100 100">
-        <mask id="dyson-mask">
-          <rect width="100" height="100" fill="white" />
-          <rect id="dyson-left" x="-50" height="100" fill="black" />
-          <rect id="dyson-right" x="50" height="100" fill="black" />
-        </mask>
-        <circle id="sun" cx="50" cy="50" r="49.9" fill="#ff4" />
-        <circle id="dyson" cx="50" cy="50" r="50" mask="url(#dyson-mask)" />
+        <defs>
+          <clipPath id="sun-clip">
+            <rect id="sun-visibility" height="100" />
+          </clipPath>
+        </defs>
+        <circle id="dyson" cx="50" cy="50" r="50" />
+        <circle
+          id="sun"
+          cx="50"
+          cy="50"
+          r="50"
+          fill="#ff4"
+          clip-path="url(#sun-clip)"
+        />
       </svg>
     </div>
     <div id="ground"></div>
