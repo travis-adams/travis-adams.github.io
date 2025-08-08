@@ -23,7 +23,7 @@ p {
   }
 
   20%,
-  30% {
+  25% {
     filter: brightness(100%);
   }
 
@@ -39,10 +39,19 @@ p {
 
 #sky {
   background-color: #66f;
-  height: 1000vh;
+  height: 2000vh;
   width: 100%;
   animation: lighten-sky-then-darken linear;
   animation-timeline: --page-scroll;
+}
+
+#narration {
+  flex: 1;
+  padding: 2rem;
+  color: #eee;
+  font-weight: bold;
+  font-size: 1.5rem;
+  font-family: monospace;
 }
 
 @keyframes raise-sun {
@@ -66,6 +75,12 @@ p {
   z-index: 2;
   animation: raise-sun linear;
   animation-timeline: --page-scroll;
+}
+
+@media (orientation: portrait) {
+  #sun-container {
+    flex-direction: column;
+  }
 }
 
 @keyframes lower-ground {
@@ -105,14 +120,19 @@ p {
 }
 
 #sun-svg {
+  flex: 1;
   transform: rotate(-13deg);
   animation: blur-dyson linear;
   animation-timeline: --page-scroll;
 }
 
+#spacer {
+  flex: 1;
+}
+
 @keyframes hide-sun {
   0%,
-  30% {
+  25% {
     x: 0%;
     width: 100%;
   }
