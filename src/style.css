@@ -33,3 +33,11 @@ body {
     }
   }
 }
+
+#game-link {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 1rem;
+  font-size: 10px;
+}
