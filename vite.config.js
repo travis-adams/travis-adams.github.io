@@ -9,7 +9,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, "index.html"),
-        sunrise: resolve(__dirname, "sunrise/index.html"),
+        "game/intro": resolve(__dirname, "game/intro/index.html"),
       },
     },
   },
