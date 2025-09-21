@@ -22,8 +22,8 @@ p {
     filter: brightness(20%);
   }
 
-  20%,
-  25% {
+  10%,
+  15% {
     filter: brightness(100%);
   }
 
@@ -39,10 +39,38 @@ p {
 
 #sky {
   background-color: #66f;
-  height: 2000vh;
+  height: 4000vh;
   width: 100%;
   animation: lighten-sky-then-darken linear;
   animation-timeline: --page-scroll;
+}
+
+@keyframes narration {
+  0%,
+  20% {
+    content: "Another beautiful sunrise!";
+  }
+
+  30% {
+    content: "It may be our last.";
+  }
+
+  45% {
+    content: "An advanced extraterrestrial entity has targeted our little star.";
+  }
+
+  60% {
+    content: "Feverish preparations have been made to protect mother earth, but...";
+  }
+
+  85% {
+    content: "The future is uncertain.";
+  }
+
+  95%,
+  100% {
+    content: "Help!!";
+  }
 }
 
 #narration {
@@ -54,12 +82,18 @@ p {
   font-family: monospace;
 }
 
+#narration::before {
+  content: "";
+  animation: narration linear;
+  animation-timeline: --page-scroll;
+}
+
 @keyframes raise-sun {
   0% {
     top: 50vh;
   }
 
-  20%,
+  10%,
   100% {
     top: 0;
   }
@@ -89,7 +123,7 @@ p {
     filter: brightness(25%);
   }
 
-  20%,
+  10%,
   100% {
     transform: scaleY(0);
     filter: brightness(100%);
@@ -132,7 +166,7 @@ p {
 
 @keyframes hide-sun {
   0%,
-  25% {
+  15% {
     x: 0%;
     width: 100%;
   }
