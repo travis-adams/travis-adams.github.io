@@ -45,6 +45,50 @@ p {
   animation-timeline: --page-scroll;
 }
 
+@keyframes bounce {
+  0% {
+    top: 0;
+  }
+
+  100% {
+    top: 15px;
+  }
+}
+
+#start-hint-container {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  animation: 1s ease-in-out 0s infinite alternate bounce;
+}
+
+@keyframes hide-start-hint {
+  0% {
+    filter: opacity(100%);
+  }
+
+  1%,
+  100% {
+    filter: opacity(0%);
+  }
+}
+
+#start-hint {
+  margin: 1.5rem;
+  padding: 1rem 1.5rem;
+  font-weight: bold;
+  font-size: 1.25rem;
+  font-family: monospace;
+  color: rgb(238 238 238 / 85%);
+  border-radius: 30px;
+  box-shadow:
+    0 0 20px rgb(238 238 238 / 60%),
+    0 0 15px rgb(238 238 238 / 50%) inset;
+  animation: hide-start-hint linear;
+  animation-timeline: --page-scroll;
+}
+
 @keyframes narration {
   0%,
   20% {
