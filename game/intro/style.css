@@ -119,7 +119,6 @@ p {
 
 #narration {
   flex: 1;
-  padding: 2rem;
   color: #eee;
   font-weight: bold;
   font-size: 1.5rem;
@@ -146,6 +145,8 @@ p {
 #sun-container {
   width: 100%;
   height: 100vh;
+  padding: 2rem;
+  box-sizing: border-box;
   position: fixed;
   display: flex;
   align-items: center;
