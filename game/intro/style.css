@@ -245,3 +245,39 @@ p {
   animation: turn-dyson-blue linear;
   animation-timeline: --page-scroll;
 }
+
+@keyframes appear-at-end {
+  0%,
+  95% {
+    filter: opacity(0%);
+  }
+
+  100% {
+    filter: opacity(100%);
+  }
+}
+
+#btn-play {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  text-decoration: none;
+  color: rgb(34 34 68 / 80%);
+  font-weight: bold;
+  font-size: 1.5rem;
+  font-family: monospace;
+  padding: 1rem 1.5rem;
+  background-color: rgb(238 238 238 / 70%);
+  border-radius: 30px;
+  box-shadow: 0 0 100px 10px rgb(238 238 238 / 90%);
+  animation: appear-at-end linear;
+  animation-timeline: --page-scroll;
+
+  &:hover {
+    color: rgb(34 34 68 / 70%);
+    background-color: rgb(238 238 238 / 80%);
+    box-shadow: 0 0 100px 10px rgb(238 238 238);
+  }
+}
