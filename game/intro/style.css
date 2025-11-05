@@ -311,6 +311,7 @@ p {
 @keyframes appear-at-end {
   0%,
   95% {
+    visibility: hidden;
     filter: opacity(0%);
   }
 
