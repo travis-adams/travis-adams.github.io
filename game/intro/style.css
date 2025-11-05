@@ -86,7 +86,7 @@ p {
     0 0 20px rgb(238 238 238 / 60%),
     0 0 15px rgb(238 238 238 / 50%) inset;
   animation:
-    1s ease-in-out 0s infinite alternate bounce,
+    1s ease-in-out infinite alternate bounce,
     hide-start-hint linear;
   animation-timeline: auto, --page-scroll;
 }
