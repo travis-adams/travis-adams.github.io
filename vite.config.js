@@ -5,6 +5,9 @@ import { defineConfig } from "vite";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
+  server: {
+    host: true,
+  },
   build: {
     rollupOptions: {
       input: {
