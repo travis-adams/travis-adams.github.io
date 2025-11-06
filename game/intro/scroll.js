@@ -1,5 +1,5 @@
 const SCROLL_DISTANCE_X = 0;
-const SCROLL_DISTANCE_Y = 14;
+const SCROLL_DISTANCE_Y = Math.round(window.innerHeight / 90);
 const SCROLL_DELAY = 10;
 let autoScrolling = false;
 let autoScrollIntervalId;
